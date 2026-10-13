@@ -1,0 +1,16 @@
+{
+  "name": "merchant-center-feed-health-monitor",
+  "version": "2.0.1",
+  "private": true,
+  "description": "Country-aware Merchant Center monitoring with persistent incident delivery for Google Ads Scripts",
+  "author": "Ishant Sharma, Hustle Marketers",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test test/monitor.test.cjs test/v2.0.1.test.cjs",
+    "check": "node --check merchant-center-feed-monitor.js",
+    "example": "node scripts/create-example.cjs"
+  }
+}
