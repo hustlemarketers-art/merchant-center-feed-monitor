@@ -1,0 +1,712 @@
+TAP version 13
+# Subtest: TEST reads supported product fields and makes no writes or sends
+ok 1 - TEST reads supported product fields and makes no writes or sends
+  ---
+  duration_ms: 7.862061
+  type: 'test'
+  ...
+# Subtest: TEST missing API gives a failure and no writes
+ok 2 - TEST missing API gives a failure and no writes
+  ---
+  duration_ms: 1.582223
+  type: 'test'
+  ...
+# Subtest: TEST malformed product data fails explicitly
+ok 3 - TEST malformed product data fails explicitly
+  ---
+  duration_ms: 1.621617
+  type: 'test'
+  ...
+# Subtest: TEST empty catalog does not claim healthy
+ok 4 - TEST empty catalog does not claim healthy
+  ---
+  duration_ms: 2.109563
+  type: 'test'
+  ...
+# Subtest: healthy complete scans remain quiet and preserve baseline
+ok 5 - healthy complete scans remain quiet and preserve baseline
+  ---
+  duration_ms: 17.806154
+  type: 'test'
+  ...
+# Subtest: Shopping disapproval is detected while free listings stay approved
+ok 6 - Shopping disapproval is detected while free listings stay approved
+  ---
+  duration_ms: 13.165127
+  type: 'test'
+  ...
+# Subtest: first run with all disapproved never sends OK
+ok 7 - first run with all disapproved never sends OK
+  ---
+  duration_ms: 14.363925
+  type: 'test'
+  ...
+# Subtest: zero-product complete observations are stored and alerted
+ok 8 - zero-product complete observations are stored and alerted
+  ---
+  duration_ms: 2.414967
+  type: 'test'
+  ...
+# Subtest: explicit expected-empty account is supported
+ok 9 - explicit expected-empty account is supported
+  ---
+  duration_ms: 1.974778
+  type: 'test'
+  ...
+# Subtest: one-country failure is detected under a shared GLOBAL label
+ok 10 - one-country failure is detected under a shared GLOBAL label
+  ---
+  duration_ms: 9.357729
+  type: 'test'
+  ...
+# Subtest: country vanishing from statuses is detected separately from label presence
+ok 11 - country vanishing from statuses is detected separately from label presence
+  ---
+  duration_ms: 8.717028
+  type: 'test'
+  ...
+# Subtest: disapproved then removed country does not falsely recover
+ok 12 - disapproved then removed country does not falsely recover
+  ---
+  duration_ms: 12.981478
+  type: 'test'
+  ...
+# Subtest: configured country absent from first scan raises a warning
+ok 13 - configured country absent from first scan raises a warning
+  ---
+  duration_ms: 5.063176
+  type: 'test'
+  ...
+# Subtest: no requested context is explicitly reported
+ok 14 - no requested context is explicitly reported
+  ---
+  duration_ms: 2.250116
+  type: 'test'
+  ...
+# Subtest: unchanged same offer across markets/currencies does not collide or double spend
+ok 15 - unchanged same offer across markets/currencies does not collide or double spend
+  ---
+  duration_ms: 4.314796
+  type: 'test'
+  ...
+# Subtest: language constants resolve to independent identities
+ok 16 - language constants resolve to independent identities
+  ---
+  duration_ms: 2.000825
+  type: 'test'
+  ...
+# Subtest: case-colliding IDs do not receive duplicate lower-case Ads spend
+ok 17 - case-colliding IDs do not receive duplicate lower-case Ads spend
+  ---
+  duration_ms: 2.207296
+  type: 'test'
+  ...
+# Subtest: unresolved language reference is unknown, not zero spend
+ok 18 - unresolved language reference is unknown, not zero spend
+  ---
+  duration_ms: 4.8195
+  type: 'test'
+  ...
+# Subtest: historical identities absent from catalog are explained
+ok 19 - historical identities absent from catalog are explained
+  ---
+  duration_ms: 4.55419
+  type: 'test'
+  ...
+# Subtest: display cap does not limit detection or status baseline
+ok 20 - display cap does not limit detection or status baseline
+  ---
+  duration_ms: 5.474409
+  type: 'test'
+  ...
+# Subtest: pagination obeys exact remaining cap and preserves prior baseline
+ok 21 - pagination obeys exact remaining cap and preserves prior baseline
+  ---
+  duration_ms: 190.257046
+  type: 'test'
+  ...
+# Subtest: exact page limit with no remaining page is complete
+ok 22 - exact page limit with no remaining page is complete
+  ---
+  duration_ms: 129.405709
+  type: 'test'
+  ...
+# Subtest: over-sized API page is sliced and marked partial
+ok 23 - over-sized API page is sliced and marked partial
+  ---
+  duration_ms: 1.285104
+  type: 'test'
+  ...
+# Subtest: repeated page tokens cannot loop indefinitely
+ok 24 - repeated page tokens cannot loop indefinitely
+  ---
+  duration_ms: 1.023033
+  type: 'test'
+  ...
+# Subtest: deadline before catalog starts makes no API call
+ok 25 - deadline before catalog starts makes no API call
+  ---
+  duration_ms: 0.911756
+  type: 'test'
+  ...
+# Subtest: invalid response record cannot replace a valid baseline
+ok 26 - invalid response record cannot replace a valid baseline
+  ---
+  duration_ms: 9.694294
+  type: 'test'
+  ...
+# Subtest: failed Ads reporting does not block Merchant health checks
+ok 27 - failed Ads reporting does not block Merchant health checks
+  ---
+  duration_ms: 5.663736
+  type: 'test'
+  ...
+# Subtest: Ads row cap discards incomplete financial totals
+ok 28 - Ads row cap discards incomplete financial totals
+  ---
+  duration_ms: 4.747927
+  type: 'test'
+  ...
+# Subtest: MCC selects correct client and continues after another client fails
+ok 29 - MCC selects correct client and continues after another client fails
+  ---
+  duration_ms: 15.991399
+  type: 'test'
+  ...
+# Subtest: single account ID mismatch is explicit
+ok 30 - single account ID mismatch is explicit
+  ---
+  duration_ms: 8.85017
+  type: 'test'
+  ...
+# Subtest: getter-style Merchant responses work
+ok 31 - getter-style Merchant responses work
+  ---
+  duration_ms: 10.649018
+  type: 'test'
+  ...
+# Subtest: numeric offer IDs preserve leading zeros in reports and state
+ok 32 - numeric offer IDs preserve leading zeros in reports and state
+  ---
+  duration_ms: 3.526892
+  type: 'test'
+  ...
+# Subtest: formula-looking external strings are literal in Sheets
+ok 33 - formula-looking external strings are literal in Sheets
+  ---
+  duration_ms: 3.584995
+  type: 'test'
+  ...
+# Subtest: HTML derived from feed names is escaped
+ok 34 - HTML derived from feed names is escaped
+  ---
+  duration_ms: 10.464143
+  type: 'test'
+  ...
+# Subtest: currency-specific tiny-price thresholds do not flag JPY 1
+ok 35 - currency-specific tiny-price thresholds do not flag JPY 1
+  ---
+  duration_ms: 8.177421
+  type: 'test'
+  ...
+# Subtest: micros-sized USD price triggers critical when product has spend
+ok 36 - micros-sized USD price triggers critical when product has spend
+  ---
+  duration_ms: 4.073421
+  type: 'test'
+  ...
+# Subtest: same-currency price jump persists until return to reference range
+ok 37 - same-currency price jump persists until return to reference range
+  ---
+  duration_ms: 29.10053
+  type: 'test'
+  ...
+# Subtest: currency changes never produce an exchange-rate price ratio
+ok 38 - currency changes never produce an exchange-rate price ratio
+  ---
+  duration_ms: 14.227648
+  type: 'test'
+  ...
+# Subtest: custom-label loss persists and then recovers
+ok 39 - custom-label loss persists and then recovers
+  ---
+  duration_ms: 28.018689
+  type: 'test'
+  ...
+# Subtest: numeric-only ID migrations are detected
+ok 40 - numeric-only ID migrations are detected
+  ---
+  duration_ms: 15.120033
+  type: 'test'
+  ...
+# Subtest: previous sixth prefix is not falsely declared new
+ok 41 - previous sixth prefix is not falsely declared new
+  ---
+  duration_ms: 26.77988
+  type: 'test'
+  ...
+# Subtest: primary source disappearance is identified as primary only
+ok 42 - primary source disappearance is identified as primary only
+  ---
+  duration_ms: 12.166058
+  type: 'test'
+  ...
+# Subtest: configured stale supplemental FILE upload is checked directly
+ok 43 - configured stale supplemental FILE upload is checked directly
+  ---
+  duration_ms: 5.008418
+  type: 'test'
+  ...
+# Subtest: file source failure is unknown coverage and blocks OK
+ok 44 - file source failure is unknown coverage and blocks OK
+  ---
+  duration_ms: 4.656559
+  type: 'test'
+  ...
+# Subtest: expiry dates are checked
+ok 45 - expiry dates are checked
+  ---
+  duration_ms: 2.51124
+  type: 'test'
+  ...
+# Subtest: optional inventory anomaly check works
+ok 46 - optional inventory anomaly check works
+  ---
+  duration_ms: 5.246889
+  type: 'test'
+  ...
+# Subtest: historical contribution requires explicit revenue assumption and margin
+ok 47 - historical contribution requires explicit revenue assumption and margin
+  ---
+  duration_ms: 4.137105
+  type: 'test'
+  ...
+# Subtest: unconfirmed conversion values never become profit estimates
+ok 48 - unconfirmed conversion values never become profit estimates
+  ---
+  duration_ms: 4.606631
+  type: 'test'
+  ...
+# Subtest: webhook HTTP 500 is retried, recorded and retained for a later run
+ok 49 - webhook HTTP 500 is retried, recorded and retained for a later run
+  ---
+  duration_ms: 10.29044
+  type: 'test'
+  ...
+# Subtest: permanent webhook HTTP 400 is not retried in the same run
+ok 50 - permanent webhook HTTP 400 is not retried in the same run
+  ---
+  duration_ms: 5.020473
+  type: 'test'
+  ...
+# Subtest: mail error does not prevent webhook delivery
+ok 51 - mail error does not prevent webhook delivery
+  ---
+  duration_ms: 6.260686
+  type: 'test'
+  ...
+# Subtest: retrying failed email does not resend previously accepted webhook
+ok 52 - retrying failed email does not resend previously accepted webhook
+  ---
+  duration_ms: 10.187228
+  type: 'test'
+  ...
+# Subtest: unchanged incidents are deduplicated before reminder interval
+ok 53 - unchanged incidents are deduplicated before reminder interval
+  ---
+  duration_ms: 9.770514
+  type: 'test'
+  ...
+# Subtest: persistent incident gets a configurable reminder
+ok 54 - persistent incident gets a configurable reminder
+  ---
+  duration_ms: 18.697974
+  type: 'test'
+  ...
+# Subtest: recovery is notified only after a complete healthy check
+ok 55 - recovery is notified only after a complete healthy check
+  ---
+  duration_ms: 16.035744
+  type: 'test'
+  ...
+# Subtest: failed initial alert and later recovery are both retained
+ok 56 - failed initial alert and later recovery are both retained
+  ---
+  duration_ms: 9.644778
+  type: 'test'
+  ...
+# Subtest: message caps keep remaining events pending
+ok 57 - message caps keep remaining events pending
+  ---
+  duration_ms: 11.314241
+  type: 'test'
+  ...
+# Subtest: snooze suppresses delivery without hiding incidents or claiming OK
+ok 58 - snooze suppresses delivery without hiding incidents or claiming OK
+  ---
+  duration_ms: 11.372485
+  type: 'test'
+  ...
+# Subtest: Preview retains pending alerts and suppresses all sends/heartbeat
+ok 59 - Preview retains pending alerts and suppresses all sends/heartbeat
+  ---
+  duration_ms: 5.341396
+  type: 'test'
+  ...
+# Subtest: explicit SEND_IN_PREVIEW permits test delivery
+ok 60 - explicit SEND_IN_PREVIEW permits test delivery
+  ---
+  duration_ms: 6.085082
+  type: 'test'
+  ...
+# Subtest: healthy heartbeat reports successful completion without product data
+ok 61 - healthy heartbeat reports successful completion without product data
+  ---
+  duration_ms: 4.217921
+  type: 'test'
+  ...
+# Subtest: incomplete coverage never sends a completion heartbeat
+ok 62 - incomplete coverage never sends a completion heartbeat
+  ---
+  duration_ms: 4.15173
+  type: 'test'
+  ...
+# Subtest: created spreadsheet URL is remembered automatically
+ok 63 - created spreadsheet URL is remembered automatically
+  ---
+  duration_ms: 6.905204
+  type: 'test'
+  ...
+# Subtest: state survives multiple chunks and Unicode content
+ok 64 - state survives multiple chunks and Unicode content
+  ---
+  duration_ms: 183.52852
+  type: 'test'
+  ...
+# Subtest: failed inactive-slot write leaves committed state intact
+ok 65 - failed inactive-slot write leaves committed state intact
+  ---
+  duration_ms: 9.730727
+  type: 'test'
+  ...
+# Subtest: corrupted committed state fails closed
+ok 66 - corrupted committed state fails closed
+  ---
+  duration_ms: 4.601
+  type: 'test'
+  ...
+# Subtest: state size cap does not replace a committed baseline
+ok 67 - state size cap does not replace a committed baseline
+  ---
+  duration_ms: 7.608326
+  type: 'test'
+  ...
+# Subtest: grid grows when reports exceed initial Sheets row count
+ok 68 - grid grows when reports exceed initial Sheets row count
+  ---
+  duration_ms: 100.974405
+  type: 'test'
+  ...
+# Subtest: stale baseline is not used to report a price jump
+ok 69 - stale baseline is not used to report a price jump
+  ---
+  duration_ms: 8.524632
+  type: 'test'
+  ...
+# Subtest: changed monitoring scope retires old conditions without false recovery
+ok 70 - changed monitoring scope retires old conditions without false recovery
+  ---
+  duration_ms: 11.318028
+  type: 'test'
+  ...
+# Subtest: invalid configuration fails before side effects
+ok 71 - invalid configuration fails before side effects
+  ---
+  duration_ms: 1.513105
+  type: 'test'
+  ...
+# Subtest: duplicate merchants are rejected
+ok 72 - duplicate merchants are rejected
+  ---
+  duration_ms: 1.206153
+  type: 'test'
+  ...
+# Subtest: invalid margin assumption is rejected
+ok 73 - invalid margin assumption is rejected
+  ---
+  duration_ms: 1.157204
+  type: 'test'
+  ...
+# Subtest: registration requires explicit account and confirmation
+ok 74 - registration requires explicit account and confirmation
+  ---
+  duration_ms: 1.033586
+  type: 'test'
+  ...
+# Subtest: registration cannot run accidentally in Preview
+ok 75 - registration cannot run accidentally in Preview
+  ---
+  duration_ms: 1.028032
+  type: 'test'
+  ...
+# Subtest: explicit registration uses the chosen business account, not first feed
+ok 76 - explicit registration uses the chosen business account, not first feed
+  ---
+  duration_ms: 1.018077
+  type: 'test'
+  ...
+# Subtest: overlapping runs cannot write a second state
+ok 77 - overlapping runs cannot write a second state
+  ---
+  duration_ms: 1.03902
+  type: 'test'
+  ...
+# Subtest: a failed catalog call is retried only for transient errors
+ok 78 - a failed catalog call is retried only for transient errors
+  ---
+  duration_ms: 1.906889
+  type: 'test'
+  ...
+# Subtest: webhook batches fit the message budget and do not acknowledge omitted events
+ok 79 - webhook batches fit the message budget and do not acknowledge omitted events
+  ---
+  duration_ms: 12.903616
+  type: 'test'
+  ...
+# Subtest: unknown file-upload status reports incomplete coverage
+ok 80 - unknown file-upload status reports incomplete coverage
+  ---
+  duration_ms: 4.889068
+  type: 'test'
+  ...
+# Subtest: stale history does not produce a false price recovery
+ok 81 - stale history does not produce a false price recovery
+  ---
+  duration_ms: 14.35435
+  type: 'test'
+  ...
+# Subtest: negative currency thresholds are rejected before writes
+ok 82 - negative currency thresholds are rejected before writes
+  ---
+  duration_ms: 1.393856
+  type: 'test'
+  ...
+# Subtest: ten-thousand-product offline scan retains all identities beyond display cap
+ok 83 - ten-thousand-product offline scan retains all identities beyond display cap
+  ---
+  duration_ms: 600.386138
+  type: 'test'
+  ...
+# Subtest: IN_PROGRESS is the documented file-upload enum and is not unknown
+ok 84 - IN_PROGRESS is the documented file-upload enum and is not unknown
+  ---
+  duration_ms: 6.961634
+  type: 'test'
+  ...
+# Subtest: a disappeared market cannot send a disapproval recovery notification
+ok 85 - a disappeared market cannot send a disapproval recovery notification
+  ---
+  duration_ms: 12.428572
+  type: 'test'
+  ...
+# Subtest: malformed API collection cannot overwrite a valid catalog with zero products
+ok 86 - malformed API collection cannot overwrite a valid catalog with zero products
+  ---
+  duration_ms: 7.423827
+  type: 'test'
+  ...
+# Subtest: MONITOR runs without LockService or PropertiesService (Google Ads runtime)
+ok 87 - MONITOR runs without LockService or PropertiesService (Google Ads runtime)
+  ---
+  duration_ms: 15.706735
+  type: 'test'
+  ...
+# Subtest: without SPREADSHEET_URL the report is found again in Drive, not created twice
+ok 88 - without SPREADSHEET_URL the report is found again in Drive, not created twice
+  ---
+  duration_ms: 9.974112
+  type: 'test'
+  ...
+# Subtest: two owned reports with the same name stop the run and ask for SPREADSHEET_URL
+ok 89 - two owned reports with the same name stop the run and ask for SPREADSHEET_URL
+  ---
+  duration_ms: 2.027463
+  type: 'test'
+  ...
+# Subtest: report lease blocks an overlapping run without LockService and expires on its own
+ok 90 - report lease blocks an overlapping run without LockService and expires on its own
+  ---
+  duration_ms: 9.908004
+  type: 'test'
+  ...
+# Subtest: lease is released when a run fails
+ok 91 - lease is released when a run fails
+  ---
+  duration_ms: 4.55498
+  type: 'test'
+  ...
+# Subtest: TEST checks report storage, run protection and checksum without writing
+ok 92 - TEST checks report storage, run protection and checksum without writing
+  ---
+  duration_ms: 2.314547
+  type: 'test'
+  ...
+# Subtest: TEST fails clearly when there is no SPREADSHEET_URL, no properties and no Drive
+ok 93 - TEST fails clearly when there is no SPREADSHEET_URL, no properties and no Drive
+  ---
+  duration_ms: 1.673569
+  type: 'test'
+  ...
+# Subtest: JavaScript SHA-256 matches Utilities.computeDigest, so state written by either verifies
+ok 94 - JavaScript SHA-256 matches Utilities.computeDigest, so state written by either verifies
+  ---
+  duration_ms: 37.155697
+  type: 'test'
+  ...
+# Subtest: Merchant incidents recover while Ads spend is unavailable
+ok 95 - Merchant incidents recover while Ads spend is unavailable
+  ---
+  duration_ms: 22.413424
+  type: 'test'
+  ...
+# Subtest: spend-dependent price check does not recover while spend is unavailable
+ok 96 - spend-dependent price check does not recover while spend is unavailable
+  ---
+  duration_ms: 21.220346
+  type: 'test'
+  ...
+# Subtest: Spend unavailable recovers when Ads reporting returns
+ok 97 - Spend unavailable recovers when Ads reporting returns
+  ---
+  duration_ms: 8.966505
+  type: 'test'
+  ...
+# Subtest: an incomplete catalog still never produces a recovery
+ok 98 - an incomplete catalog still never produces a recovery
+  ---
+  duration_ms: 5.919049
+  type: 'test'
+  ...
+# Subtest: a few routine disapprovals stay in the report without an alert
+ok 99 - a few routine disapprovals stay in the report without an alert
+  ---
+  duration_ms: 55.531634
+  type: 'test'
+  ...
+# Subtest: one disapproved product with Ads clicks opens an alert (like a MIN_CLICKS rule)
+ok 100 - one disapproved product with Ads clicks opens an alert (like a MIN_CLICKS rule)
+  ---
+  duration_ms: 79.473487
+  type: 'test'
+  ...
+# Subtest: count and share thresholds open alerts; both can be tuned
+ok 101 - count and share thresholds open alerts; both can be tuned
+  ---
+  duration_ms: 191.217146
+  type: 'test'
+  ...
+# Subtest: an open disapproval alert stays open until none remain (no false recovery)
+ok 102 - an open disapproval alert stays open until none remain (no false recovery)
+  ---
+  duration_ms: 127.727748
+  type: 'test'
+  ...
+# Subtest: warning reminders are weekly; critical reminders stay at 72 hours
+ok 103 - warning reminders are weekly; critical reminders stay at 72 hours
+  ---
+  duration_ms: 213.582084
+  type: 'test'
+  ...
+# Subtest: small churn in a disapproved list does not send CHANGED; a material change does
+ok 104 - small churn in a disapproved list does not send CHANGED; a material change does
+  ---
+  duration_ms: 226.593772
+  type: 'test'
+  ...
+# Subtest: catalog above the cap gets an actionable message
+ok 105 - catalog above the cap gets an actionable message
+  ---
+  duration_ms: 5.290961
+  type: 'test'
+  ...
+# Subtest: per-product state is compact (under 100 characters per product)
+ok 106 - per-product state is compact (under 100 characters per product)
+  ---
+  duration_ms: 113.364811
+  type: 'test'
+  ...
+# Subtest: state saved by v2.0.0 (object statuses, labels, source) is read correctly
+ok 107 - state saved by v2.0.0 (object statuses, labels, source) is read correctly
+  ---
+  duration_ms: 11.13875
+  type: 'test'
+  ...
+# Subtest: invalid 2.0.1 settings are rejected before any writes
+ok 108 - invalid 2.0.1 settings are rejected before any writes
+  ---
+  duration_ms: 5.862069
+  type: 'test'
+  ...
+# Subtest: a failing Drive search asks for SPREADSHEET_URL instead of guessing
+ok 109 - a failing Drive search asks for SPREADSHEET_URL instead of guessing
+  ---
+  duration_ms: 1.482672
+  type: 'test'
+  ...
+# Subtest: Drive query matches the exact report name and owner
+ok 110 - Drive query matches the exact report name and owner
+  ---
+  duration_ms: 4.723849
+  type: 'test'
+  ...
+# Subtest: a file source removed from CONFIG closes its incident without a recovery claim
+ok 111 - a file source removed from CONFIG closes its incident without a recovery claim
+  ---
+  duration_ms: 9.941934
+  type: 'test'
+  ...
+# Subtest: with monitorSpend:false, price incidents still recover and Ads-only incidents close quietly
+ok 112 - with monitorSpend:false, price incidents still recover and Ads-only incidents close quietly
+  ---
+  duration_ms: 13.533956
+  type: 'test'
+  ...
+# Subtest: TEST names the report the same way MONITOR does in a manager account
+ok 113 - TEST names the report the same way MONITOR does in a manager account
+  ---
+  duration_ms: 5.792604
+  type: 'test'
+  ...
+# Subtest: a CONFIG block copied from 2.0.0 (without the new keys) still runs with defaults
+ok 114 - a CONFIG block copied from 2.0.0 (without the new keys) still runs with defaults
+  ---
+  duration_ms: 51.933115
+  type: 'test'
+  ...
+# Subtest: if acquiring the lease fails after writing it, the lease is cleared
+ok 115 - if acquiring the lease fails after writing it, the lease is cleared
+  ---
+  duration_ms: 9.888094
+  type: 'test'
+  ...
+# Subtest: a run that loses its lease mid-run stops before writing state
+ok 116 - a run that loses its lease mid-run stops before writing state
+  ---
+  duration_ms: 8.38511
+  type: 'test'
+  ...
+# Subtest: MONITOR refuses to create a report it could not find again
+ok 117 - MONITOR refuses to create a report it could not find again
+  ---
+  duration_ms: 1.413716
+  type: 'test'
+  ...
+1..117
+# tests 117
+# suites 0
+# pass 117
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3432.235023
